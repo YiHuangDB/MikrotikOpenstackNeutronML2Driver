@@ -33,5 +33,5 @@ Change tenant_network_types to vlan.
 Modify Change network_vlan_ranges with a comma seperate list of start end of vlan id you want Openstack tenant network to use in your switch L2 network.
 Restart Openstack Neutron service. For devstack 'systemctl restart devstack@q-svc.service'
 6. When user create tenant network with a segementation id, /interface/bridge/vlan/ record will be created on vlan-ids equals to segementation id and set tagged bridge port sfp4,sfp5
-7.  When user delete tenant network with a segementation id, /interface/bridge/vlan/ record will be delete with vlan-id equal segementation id.
+7.  When user delete tenant network, /interface/bridge/vlan/ record will be delete with vlan-id equal tenant network segementation id.
 8. When create_bridge_vlan_interface = true in ml2.conf configratuion file, extra vlan interface created for bridge interface /interface/ for potential L3 routing purpose.

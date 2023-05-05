@@ -39,12 +39,14 @@ Restart Openstack Neutron service. For devstack ```'systemctl restart devstack@q
 8. When ```create_bridge_vlan_interface = true``` in ml2.conf configratuion file, extra vlan interface created for bridge interface /interface/ for potential L3 routing purpose.
 
 ## When you create a Openstack Tenant network
-    It auto generate a availabe network segment id, in this case it is 3434
+
+It auto generate availabe network segment id, in this case it is 3434
+
 <img width="531" alt="image" src="https://user-images.githubusercontent.com/118003549/236243550-62aa970e-8266-4387-9483-fbd118a687c4.png">
 
 ## Mikrotik Openstack Neutron ML2 Driver created following objects on RouterOS
-    1. A bridge vlan item tagged with interface sfp4,sfp5
-    2. A vlan interface for bridge interface with name vlan3434, vlan-id 3434, this is used for L3 routing if you want enable it later on.
+1. A bridge vlan item tagged with interface sfp4,sfp5
+2. A vlan interface for bridge interface with name vlan3434, vlan-id 3434, this is used for L3 routing if you want enable it later on.
 <img width="868" alt="image" src="https://user-images.githubusercontent.com/118003549/236243391-e6afcdab-4443-4882-baea-f7d186fe3ad8.png">
 
 ## This driver tested with Mikrotik RouterOS7.8 and suppose to work with RouterOS 7+, for RouterOS 6+ it may not work, please consider upgrade to RouterOS7.

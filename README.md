@@ -1,6 +1,4 @@
-# Mikrotik Openstack Neutron ML2 Driver
-
-## Why do you need Mikrotik Openstack Neutron ML2 Driver?
+## Why do you need Mikrotik Neutron ML2 Driver for your OpenStack deployment?
 Openstack tenant network like vxlan, geneve, gre has significant performance drawback when network card does not support hardware acceleration for vxlan, geneve, gre. In addition, vxlan, geneve, gre will further reduce MTU below 1500 and introduce fragementation, this makes some network sensitive application imposible to run in such openstack deployment environment.
 
 In contrast choose vlan as openstack tenant network simply enable openstack tenant network line rate performance without MTU fragementation. Note: this requires vlan configuration from switch.
